@@ -4,10 +4,6 @@ USER root
 ENV HOME=/home/jenkins
 ENV PinFile=./entitlement-tests/CCI/Linchpin/beaker/simple/PinFile
 
-# Install some requirements
-#RUN echo "yum install some requirements" \
-#  && yum install -y git krb5-devel libselinux-python libxml2-devel libxslt-devel libxslt-python libxslt-python gcc
-
 # Download the code
 RUN mkdir /home/jenkins \
   && cd /home/jenkins \
