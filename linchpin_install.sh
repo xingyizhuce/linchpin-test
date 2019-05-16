@@ -12,3 +12,9 @@ fi
 pushd entitlement-tests/
 linchpin -w ./CCI/Linchpin/beaker/simple -vvvv up
 PROVISION_STATUS=$?
+
+if [ "$PROVISION_STATUS" == 0 ]; then
+  cat ./CCI/Linchpin/beaker/simple/resources/linchpin.latest
+else
+  echo "ERROR: Failed to provision beaker system!"
+fi
